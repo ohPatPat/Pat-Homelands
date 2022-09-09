@@ -35,24 +35,24 @@ function App() {
         <Header />
         <Routes>
           {/* Start "route" */}
-          <Route index element={<Forside title={"Forside"} />} />
+          <Route index element={<Forside title={"Forside"} description={"Homelands blablabla"}/>} />
 
           {/* Normal "routes" */}
-          <Route path="/Login" element={<Login title={"Login"} />} />
+          <Route path="/Login" element={<Login title={"Login"} description={"Homelands blablabla"} />} />
           <Route path="/Produkter">
-            <Route index element={<Produkter title={"Boliger til salg"} />}></Route>
+            <Route index element={<Produkter title={"Boliger til salg"} description={"Homelands blablabla"}/>}></Route>
             <Route path=":group_id">
               <Route
                 index
-                element={<ProduktListe title={"ProduktListe"} />}
+                element={<ProduktListe title={"ProduktListe"} description={"Homelands blablabla"}/>}
               ></Route>
               <Route
                 path=":product_id"
-                element={<ProduktDetaljer Detaljer title={"ProduktDetaljer"} />}
+                element={<ProduktDetaljer Detaljer title={"ProduktDetaljer"} description={"Homelands blablabla"}/>}
               ></Route>
 
               {/* "Route" for not pages that cant be found */}
-              <Route path="*" element={<NotFound title={"Siden Findes ikke"} />} />
+              <Route path="*" element={<NotFound title={"Siden Findes ikke"} description={"Homelands blablabla"}/>} />
             </Route>
           </Route>
         </Routes>

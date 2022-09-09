@@ -1,60 +1,60 @@
 {
-  "name": "______",
-  "short_name": "______",
-  "description": "______",
+  "name": "Homelands",
+  "short_name": "Homelands",
+  "description": "Homelands",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "______",
-  "theme_color": "______",
+  "background_color": "#af7627",
+  "theme_color": "#af7627",
   "icons": [
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo72x72.png",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo96x96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo120x120.png",
       "type": "image/png",
       "sizes": "120x120"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo128x128.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo152x152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo180x180.png",
       "type": "image/png",
       "sizes": "180x180"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo384x384.png",
       "type": "image/png",
       "sizes": "384x384"
     },
     {
-      "src": "______",
+      "src": "icons/Homelands_Logo512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"

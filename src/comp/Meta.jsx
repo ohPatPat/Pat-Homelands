@@ -9,6 +9,17 @@ export const Meta = (props) => {
         .querySelector('meta[name="description"]')
         .setAttribute("content", props.description);
     }
+	if (props.title) {
+		document
+		  .querySelector('meta[name="title"]')
+		  .setAttribute("content", props.title);
+	  }
+  	if (props.title) {
+		document
+		  .querySelector('meta[property="og:title"]')
+		  .setAttribute("content", props.title);
+	  }
+
   }, [props.title, props.description]);
 
   const str = props.title;

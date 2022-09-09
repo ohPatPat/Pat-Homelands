@@ -16,6 +16,9 @@ $Sort: #000000;
 $Trebuchet: "Trebuchet MS";
 $Odibee: "Odibee Sans";
 
+body{
+  overflow-x: hidden;
+}
 header {
   position: fixed;
   background-color: $Sort;
