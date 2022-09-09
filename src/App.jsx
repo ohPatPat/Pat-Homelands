@@ -13,7 +13,6 @@ import { useAuth } from "./page/login/Auth.js";
 import { Forside } from "./page/Forside.jsx";
 import { Login } from "./page/login/Login.jsx";
 import { Profile } from "./page/Profile.jsx";
-import { NavBarLeft } from "./comp/NavBarLeft";
 
 import { ProduktListe } from "./page/products/ProduktListe.jsx";
 import { ProduktDetaljer } from "./page/products/ProduktDetaljer.jsx";
@@ -33,16 +32,15 @@ function App() {
   return (
     <>
       <Router>
-        <Header></Header>
-        <NavBarLeft></NavBarLeft>
+        <Header />
         <Routes>
           {/* Start "route" */}
           <Route index element={<Forside title={"Forside"} />} />
 
           {/* Normal "routes" */}
           <Route path="/Login" element={<Login title={"Login"} />} />
-          <Route path="/products">
-            <Route index element={<Produkter title={"Produkter"} />}></Route>
+          <Route path="/Produkter">
+            <Route index element={<Produkter title={"Boliger til salg"} />}></Route>
             <Route path=":group_id">
               <Route
                 index
@@ -60,7 +58,7 @@ function App() {
         </Routes>
       </Router>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

@@ -1,9 +1,10 @@
 import { Meta } from "../../comp/Meta.jsx";
+import { CardsList } from "../../comp/cards/Cards.jsx";
 
 export const Produkter = (props) => {
 	return (
 		<Meta title={props.title}>
-			<p>Se vores udvalg af instrumenter</p>
+			<CardsList></CardsList>
 		</Meta>
 	)
 }

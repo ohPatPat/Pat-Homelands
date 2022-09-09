@@ -21,76 +21,74 @@ export const Login = (props) => {
     handleSessionData(result);
   };
 
-
   const handleSessionData = (res) => {
+    console.log(res);
     if (!res.message) {
       setLoginData(res.data);
       sessionStorage.setItem("token", JSON.stringify(res.data));
     }
-  }
+  };
 
   const logOut = () => {
-    sessionStorage.removeItem('token')
-    setLoginData('')
-  }
+    sessionStorage.removeItem("token");
+    setLoginData("");
+  };
+  // tola Tordis
+  console.log(loginData.username);
 
-  if(loginData) {
-    if (loginData.username === 'pada') {
-      loginData.username = `Patrik`
+  if (loginData) {
+    if (loginData.username === "pada" || loginData.username === "Patrik") {
+      loginData.username = "Patrik";
+      console.log(loginData.username);
     } else {
-      loginData.username = ``
+      loginData.username = "Lærer";
+      console.log(loginData.username);
     }
-    
   }
-
 
   return (
     <Meta title={props.title}>
+      <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
       {!loginData && !loginData.username ? (
-        // Closures funtion here - I end a imported funktion (handleSubmit) via a new funktion (sendLoginRequest) 
+        // Closures funtion here - I end a imported funktion (handleSubmit) via a new funktion (sendLoginRequest)
         <form onSubmit={handleSubmit(sendLoginRequest)}>
-          <div>
+          <div className="InputWrapper">
             <input
+              onFocus={(e) => (e.target.value = "")}
               type="text"
               id="username"
-              placeholder="Indtast brugernavn"
+              // className={e.target.value ? "Correct" : "NotCorrect"}
+
+              placeholder="Brugernavn"
               {...register("username", { required: true })}
             />
-            {errors.username && (
-              <span>
-                Du skal udfylde dit brugernavn!
-              </span>
-            )}
+            {errors.username && <span>Du skal udfylde dit brugernavn!</span>}
           </div>
-          <div>
+          <div className="InputWrapper">
             <input
+              onFocus={(e) => (e.target.value = "")}
               type="password"
               id="password"
-              placeholder="Indtast adgangskode"
+              placeholder="Adgangskode"
               {...register("password", { required: true })}
             />
-            {errors.password && (
-              <span>
-                Du skal udfylde din adgangskode!
-              </span>
-            )}
+            {errors.password && <span>Du skal udfylde din adgangskode!</span>}
           </div>
           <div>
-            <button type="submit">
-              Login
-            </button>
-            <button type="reset">
-              Nulstil felter
-            </button>
+            <button type="submit">Login</button>
+            <button type="reset">Annuller</button>
           </div>
         </form>
-      ) :
+      ) : (
         <div>
-          <p>Du er logget ind som <i>{loginData.username}</i></p>
-          <button onClick={logOut}>Log ud</button>
+          <p>
+            Du er logget ind som <i>{loginData.username}</i>
+          </p>
+          <button id="LogoutButton" onClick={logOut}>
+            Log ud
+          </button>
         </div>
-      }
+      )}
     </Meta>
   );
-
 };
